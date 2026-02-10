@@ -1,0 +1,16 @@
+node_modules
+.pnp*
+.env*
+.next
+.expo
+.expo-shared
+.DS_Store
+coverage
+build
+dist
+ios
+android
+.vscode
+tmp
+**/.turbo
+**/.nx

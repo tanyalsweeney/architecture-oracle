@@ -1,0 +1,252 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Space Grotesk", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background-color: #030712;
+  color: #f1f5f9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #0f172a, #020617 60%);
+  padding: 4rem;
+}
+
+.hero {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: #a5b4fc;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  margin-block: 1rem;
+}
+
+p {
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+.cta-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cta {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 200ms ease, background-color 200ms ease;
+}
+
+.cta.primary {
+  background: #6366f1;
+  color: #fff;
+}
+
+.cta.ghost {
+  border: 1px solid #475569;
+  color: #e2e8f0;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+article {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+}
+
+article a {
+  color: #a5b4fc;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin: 0.75rem 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.advisor {
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background: rgba(15, 23, 42, 0.75);
+  display: grid;
+  gap: 1.5rem;
+  grid-column: 1 / -1;
+}
+
+.advisor-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.field-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+input,
+textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.8);
+  color: #f8fafc;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error {
+  color: #fca5a5;
+  font-weight: 600;
+}
+
+.advisor-output {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.decision {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: rgba(2, 6, 23, 0.6);
+}
+
+.decision-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c7d2fe;
+  margin: 0.5rem 0;
+}
+
+.decision-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 1rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(129, 140, 248, 0.6);
+  color: #e0e7ff;
+  font-size: 0.85rem;
+}
+
+.agent-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.agent-card {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.agent-recommendation {
+  font-weight: 600;
+  color: #e0e7ff;
+  margin: 0.5rem 0;
+}
+
+.advisor-output ol,
+.advisor-output ul {
+  margin-left: 1.25rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.secondary {
+  opacity: 0.6;
+  font-size: 0.85rem;
+  margin-top: 3rem;
+}
+
+.secondary h1 {
+  font-size: 1.5rem;
+}
+
+.secondary .eyebrow {
+  font-size: 0.65rem;
+}
+
+.secondary .cta {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.secondary-grid {
+  font-size: 0.85rem;
+  margin-top: 3rem;
+}
+
+.secondary-grid article {
+  padding: 0.875rem;
+}
+
+.secondary-grid .eyebrow {
+  font-size: 0.65rem;
+}

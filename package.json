@@ -1,0 +1,20 @@
+{
+  "name": "architecture-oracle",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @architecture-oracle/web dev",
+    "dev:api": "pnpm --filter @architecture-oracle/api dev",
+    "dev:mobile": "pnpm --filter @architecture-oracle/mobile start",
+    "build:web": "pnpm --filter @architecture-oracle/web build",
+    "build:api": "pnpm --filter @architecture-oracle/api build",
+    "lint:web": "pnpm --filter @architecture-oracle/web lint",
+    "lint:api": "pnpm --filter @architecture-oracle/api lint",
+    "test": "pnpm -r test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
