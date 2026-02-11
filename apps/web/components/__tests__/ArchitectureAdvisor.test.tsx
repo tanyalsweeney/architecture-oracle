@@ -80,8 +80,8 @@ const mockResponse: MockArchitectureResponse = {
 };
 
 describe("ArchitectureAdvisor", () => {
-  beforeEach(() => {
-    vi.restoreAllMocks();
+  afterEach(() => {
+    vi.unstubAllGlobals();
   });
 
   it("shows a validation message when description is empty", async () => {
@@ -100,7 +100,7 @@ describe("ArchitectureAdvisor", () => {
       json: async () => mockResponse
     });
 
-    global.fetch = fetchMock as unknown as typeof fetch;
+    vi.stubGlobal('fetch', fetchMock);
 
     render(<ArchitectureAdvisor />);
 
