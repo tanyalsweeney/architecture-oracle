@@ -100,7 +100,7 @@ describe("ArchitectureAdvisor", () => {
       json: async () => mockResponse
     });
 
-    global.fetch = fetchMock as unknown as typeof fetch;
+    vi.stubGlobal("fetch", fetchMock);
 
     render(<ArchitectureAdvisor />);
 
